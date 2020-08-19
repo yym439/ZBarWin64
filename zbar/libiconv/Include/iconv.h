@@ -38,7 +38,7 @@
 #else
 #define LIBICONV_DLL_EXPORTED __declspec(dllimport)
 #endif
-extern LIBICONV_DLL_EXPORTED int _libiconv_version; /* Likewise */
+extern  int _libiconv_version; /* Likewise */
 ////////////////////////////////////////////////////////////////////////////////
 
 /* We would like to #include any system header file which could define
@@ -87,7 +87,7 @@ extern "C" {
 #ifndef LIBICONV_PLUG
 #define iconv_open libiconv_open
 #endif
-extern LIBICONV_DLL_EXPORTED iconv_t iconv_open (const char* tocode, const char* fromcode);
+extern  iconv_t iconv_open (const char* tocode, const char* fromcode);
 
 /* Converts, using conversion descriptor ‘cd’, at most ‘*inbytesleft’ bytes
    starting at ‘*inbuf’, writing at most ‘*outbytesleft’ bytes starting at
@@ -101,14 +101,14 @@ extern LIBICONV_DLL_EXPORTED iconv_t iconv_open (const char* tocode, const char*
 ///////////////////////// 삭제 / DELETE / УДАЛИТЬ ///////////////////////
 //extern LIBICONV_DLL_EXPORTED size_t iconv (iconv_t cd, @ICONV_CONST@ char* * inbuf, size_t *inbytesleft, char* * outbuf, size_t *outbytesleft);
 ///////////////////////// 추가 / ADD / ДОВАВЛЯТЬ //////////////////////
-extern LIBICONV_DLL_EXPORTED size_t iconv (iconv_t cd, const char* * inbuf, size_t *inbytesleft, char* * outbuf, size_t *outbytesleft);
+extern  size_t iconv (iconv_t cd, const char* * inbuf, size_t *inbytesleft, char* * outbuf, size_t *outbytesleft);
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Frees resources allocated for conversion descriptor ‘cd’. */
 #ifndef LIBICONV_PLUG
 #define iconv_close libiconv_close
 #endif
-extern LIBICONV_DLL_EXPORTED int iconv_close (iconv_t cd);
+extern  int iconv_close (iconv_t cd);
 
 
 #ifdef __cplusplus

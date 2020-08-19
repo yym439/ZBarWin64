@@ -1,0 +1,11 @@
+*.aps
+*.bak
+*.VC.db
+*.VC.opendb
+*.vs
+*.vcxproj.user
+x86/*
+x64/*
+Release/*
+Debug/*
+.vs/*
